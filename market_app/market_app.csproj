@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{34038052-E8C3-45A9-9498-E7C2D9BD030C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>market_app</RootNamespace>
+    <AssemblyName>market_app</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSet\market_data.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>market_data.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="First method\first_method.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="First method\first_method.Designer.cs">
+      <DependentUpon>first_method.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_form.Designer.cs">
+      <DependentUpon>Main_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Second Method\second_method_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Second Method\second_method_main.Designer.cs">
+      <DependentUpon>second_method_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Second Method\sm_child_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Second Method\sm_child_form.Designer.cs">
+      <DependentUpon>sm_child_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Third method\third_main_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Third method\third_main_form.Designer.cs">
+      <DependentUpon>third_main_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Third method\tm_child_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Third method\tm_child_form.Designer.cs">
+      <DependentUpon>tm_child_form.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="First method\first_method.resx">
+      <DependentUpon>first_method.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_form.resx">
+      <DependentUpon>Main_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Second Method\second_method_main.resx">
+      <DependentUpon>second_method_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Second Method\sm_child_form.resx">
+      <DependentUpon>sm_child_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Third method\third_main_form.resx">
+      <DependentUpon>third_main_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Third method\tm_child_form.resx">
+      <DependentUpon>tm_child_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet\market_data.xsc">
+      <DependentUpon>market_data.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\market_data.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>market_data.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\market_data.xss">
+      <DependentUpon>market_data.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataSources\pics\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
